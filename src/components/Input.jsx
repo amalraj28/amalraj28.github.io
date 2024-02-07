@@ -3,11 +3,10 @@ import "../styles/styles.css";
 import { InputContext } from "../exports/exports";
 
 function Input() {
-	const {text, setText} = useContext(InputContext);
-  
+	const { text, setText } = useContext(InputContext);
 
 	return (
-		<div>
+		<div className="input-div">
 			<input
 				type="text"
 				name="number"

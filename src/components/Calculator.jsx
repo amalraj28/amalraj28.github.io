@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Key from "./Key";
 import Input from "./Input";
 import "../styles/styles.css";
@@ -10,9 +9,23 @@ function Calculator() {
 		<div className="table">
 			<table>
 				<tbody>
-					<tr className="input-field">
-						<td>
+					<tr className="input-row">
+						<td className="input-field" colSpan={4}>
 							<Input />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<Key value="" />
+						</td>
+						<td>
+							<Key value="CE" />
+						</td>
+						<td>
+							<Key value="bksp" />
+						</td>
+						<td>
+							<Key value="+" />
 						</td>
 					</tr>
 					<tr>
@@ -25,6 +38,9 @@ function Calculator() {
 						<td>
 							<Key value="3" />
 						</td>
+						<td>
+							<Key value="-" />
+						</td>
 					</tr>
 					<tr>
 						<td>
@@ -35,6 +51,9 @@ function Calculator() {
 						</td>
 						<td>
 							<Key value="6" />
+						</td>
+						<td>
+							<Key value="*" />
 						</td>
 					</tr>
 					<tr>
@@ -47,6 +66,9 @@ function Calculator() {
 						<td>
 							<Key value="9" />
 						</td>
+						<td>
+							<Key value="/" />
+						</td>
 					</tr>
 					<tr>
 						<td>
@@ -57,6 +79,9 @@ function Calculator() {
 						</td>
 						<td>
 							<Key value="." />
+						</td>
+						<td>
+							<Key value="=" />
 						</td>
 					</tr>
 				</tbody>

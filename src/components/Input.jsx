@@ -4,9 +4,6 @@ import { InputContext } from "../exports/exports";
 
 function Input() {
 	const { state, dispatch } = useContext(InputContext);
-	// useEffect(() => {
-	// 	console.log("Input Component rendered");
-	// }, [text]);
 
 	return (
 		<div className="input-div">

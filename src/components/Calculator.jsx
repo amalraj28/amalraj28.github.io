@@ -72,7 +72,7 @@ function Calculator() {
 					</tr>
 					<tr>
 						<td>
-							<Key value={<FontAwesomeIcon icon={faPlusMinus} />} />
+							<Key value={<FontAwesomeIcon icon={faPlusMinus} />} name="plus-minus" />
 						</td>
 						<td>
 							<Key value="0" />

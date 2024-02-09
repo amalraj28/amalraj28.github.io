@@ -9,6 +9,7 @@ const initState = {
 };
 
 const reducer = (currState, action) => {
+	const text = currState.text;
 	switch (action.val) {
 		case "1":
 		case "2":
@@ -22,25 +23,31 @@ const reducer = (currState, action) => {
 		case "0":
 			return {
 				...currState,
-				text:
-					currState.text === "0"
-						? "" + action.val
-						: currState.text + action.val,
+				text: text === "0" ? "" + action.val : text + action.val,
 			};
 
 		case ".":
 			return currState.decimal === 0
-				? { text: currState.text + action.val, decimal: 1 }
+				? { ...currState, text: text + action.val, decimal: 1 }
 				: currState;
 
 		case "CE":
 			return initState;
 
 		case "bksp":
-			if (currState.text.length < 2) return initState;
-			return currState.text.charAt(currState.text.length - 1) === "."
-				? { ...currState, text: currState.text.slice(0, -1), decimal: 0 }
-				: { ...currState, text: currState.text.slice(0, -1) };
+			return text.length < 2
+				? initState
+				: text.charAt(text.length - 1) === "."
+				? { ...currState, text: text.slice(0, -1), decimal: 0 }
+				: { ...currState, text: text.slice(0, -1) };
+
+		case "plus-minus": {
+			const num = parseInt(text);
+			if (num === 0) return currState;
+			const newText = Math.sign(num) === 1 ? `-${text}` : text.slice(1);
+
+			return { ...currState, text: newText };
+		}
 
 		default:
 			return currState;

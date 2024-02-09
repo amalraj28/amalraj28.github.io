@@ -3,16 +3,22 @@ import "../styles/styles.css";
 import { InputContext } from "../exports/exports";
 
 function Input() {
-	const { text, setText } = useContext(InputContext);
+	const { state, dispatch } = useContext(InputContext);
+	// useEffect(() => {
+	// 	console.log("Input Component rendered");
+	// }, [text]);
 
 	return (
-		<input
-			type="text"
-			name="number"
-			className="input"
-			value={text}
-			onChange={(e) => setText(e.target.value)}
-		/>
+		<div className="input-div">
+			<textarea
+				readOnly
+				type="text"
+				name="number"
+				className="input"
+				value={state.text}
+				onChange={(e) => dispatch({val: e.target.value})}
+			/>
+		</div>
 	);
 }
 

@@ -1,13 +1,19 @@
 .input {
-  width: 100%;
+  width: inherit;
   box-sizing: border-box;
-  text-align: right;
   font-size: xx-large;
-  height: 100%;  
+  height: inherit;
+  resize: none;
+  text-align: right;
+  
 }
 
 .input-row {
   height: 100px;
+}
+
+.input-div {
+  height: inherit;
 }
 
 .input-field {

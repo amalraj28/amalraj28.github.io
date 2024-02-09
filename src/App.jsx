@@ -35,9 +35,9 @@ const reducer = (currState, action) => {
 			return initState;
 
 		case "bksp":
-			return text.length < 2
+			return text.length < 2 || (text.length === 2 && text[0] === '-')
 				? initState
-				: text.charAt(text.length - 1) === "."
+				: text[text.length - 1] === "."
 				? { ...currState, text: text.slice(0, -1), decimal: 0 }
 				: { ...currState, text: text.slice(0, -1) };
 

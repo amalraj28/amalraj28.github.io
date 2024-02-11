@@ -1,10 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useContext } from "react";
 import "../styles/styles.css";
 import { InputContext } from "../exports/exports";
+// import { propTypes } from "prop-types";
 
-function Input() {
+function Input({ upper = false }) {
 	const { state, dispatch } = useContext(InputContext);
-
+	// console.log(upper)
 	return (
 		<div className="input-div">
 			<textarea
@@ -12,11 +14,13 @@ function Input() {
 				type="text"
 				name="number"
 				className="input"
-				value={state.text}
-				onChange={(e) => dispatch({val: e.target.value})}
+				value={upper ? state.upperText : state.text}
+				onChange={(e) => dispatch({ val: e.target.value })}
 			/>
 		</div>
 	);
 }
+
+// Input.propTypes = { upper: PropTypes.objectOf(proptypes.any) };
 
 export default Input;

@@ -9,7 +9,12 @@ function Calculator() {
 		<div className="table">
 			<table>
 				<tbody>
-					<tr className="input-row">
+					<tr className="input-row" id="upper-input">
+						<td className="input-field" colSpan={4}>
+							<Input upper={true} />
+						</td>
+					</tr>
+					<tr className="input-row" id="lower-input">
 						<td className="input-field" colSpan={4}>
 							<Input />
 						</td>
@@ -72,7 +77,10 @@ function Calculator() {
 					</tr>
 					<tr>
 						<td>
-							<Key value={<FontAwesomeIcon icon={faPlusMinus} />} name="plus-minus" />
+							<Key
+								value={<FontAwesomeIcon icon={faPlusMinus} />}
+								name="plus-minus"
+							/>
 						</td>
 						<td>
 							<Key value="0" />

@@ -1,15 +1,15 @@
 .input {
-  width: inherit;
+  width: 100%;
   box-sizing: border-box;
   font-size: xx-large;
-  height: inherit;
+  height: 100%;
   resize: none;
   text-align: right;
   
 }
 
 .input-row {
-  height: 100px;
+  height: 70%;
 }
 
 .input-div {
@@ -26,7 +26,7 @@
 }
 
 .table {
-  width: 300px;
+  width: 500px;
 }
 
 .key {
@@ -45,6 +45,6 @@ tr {
 
 td {
   background-color: green;
-  width: 33%;
+  /* width: 33%; */
   
 }

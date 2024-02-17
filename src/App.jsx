@@ -127,7 +127,7 @@ const reducer = (currState, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, initState);
   return (
-    <div>
+    <div className="screen">
       <InputContext.Provider value={{ state, dispatch }}>
         <Calculator />
       </InputContext.Provider>

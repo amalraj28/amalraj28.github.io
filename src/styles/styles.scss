@@ -1,0 +1,139 @@
+$mobile-xs: 300px;
+$mobile-md: 768px;
+$mobile-lg: 1024px;
+$desktop-sm: 1200px;
+$desktop-lg: 1440px;
+$desktop-xl: 1600px;
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: xx-large;
+  height: 100%;
+  resize: none;
+  text-align: right;
+}
+
+.text-row {
+  height: fit-content;
+}
+
+.input-div {
+  // height: 100%;
+  display: flex;
+  place-items: baseline;
+}
+
+.text-field {
+  width: 100%;
+  height: 10vh;
+}
+
+// #lower-text {
+//   height: 5vh;
+// }
+
+// #upper-text {
+//   height: 2vh;
+// }
+
+.key-div {
+  height: 100%;
+}
+
+// .table {
+//   width: 500px;
+// }
+
+.key {
+  width: 100%;
+  height: 100%;
+}
+
+.table {
+  margin-top: 10vh;
+  // margin-bottom: 5vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  // height: 80vh;
+  width: 85vw;
+  background-color: white;
+  margin-left: 7%;
+  margin-right: 5%;
+
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  background-color: blue;
+  height: 80vh;
+  // width: 100vw;
+}
+
+tr {
+  background-color: red;
+}
+
+td {
+  background-color: green;
+  /* width: 33%; */
+}
+
+// @media only screen and (max-width: 768px) {
+//   .input {
+//     /* font-size: small; Adjust font size for smaller screens */
+//     /* color: aqua; */
+//     /* background-color: aqua; */
+//   }
+// }
+
+// @media screen and (max-width: $mobile-xs) {
+//   table {
+//     width: calc($mobile-xs/2); // Adjust table width for smaller screens
+//     background-color: red;
+//   }
+// }
+
+// @media screen and (min-width: $mobile-lg) {
+//   .table {
+//     display: flex;
+//     place-items: center;
+//     background-color: blue;
+//     justify-content: center;
+    
+//   }
+// }
+  
+//   table {
+//     width: 100vw;
+//     height: 100%;
+//     // height: 100vh;
+//   }
+// }
+
+@media screen and (min-width: $desktop-sm) {
+  table {
+    width: 60vw;
+  }
+  .text-row {
+    height: 15vh;
+  }
+  .input-div {
+    height: 15vh;
+  }
+  .key {
+    font-size: x-large;
+  }
+  .table {
+    margin-top: 3vh;
+    // width: 50vw;
+    // height: 5vh;
+  }
+}
+
+@media screen and (max-width: $mobile-lg){
+  .input {
+    height: 15vh;
+  }
+}

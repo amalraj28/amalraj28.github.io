@@ -1,6 +1,6 @@
 import Key from "./Key";
 import Input from "./Input";
-import "../styles/styles.css";
+import "../styles/styles.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusMinus } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,13 +9,13 @@ function Calculator() {
     <div className="table">
       <table>
         <tbody>
-          <tr className="input-row" id="upper-input">
-            <td className="input-field" colSpan={4}>
+          <tr className="text-row" id="upper-text">
+            <td className="text-field" colSpan={4}>
               <Input upper={true} />
             </td>
           </tr>
-          <tr className="input-row" id="lower-input">
-            <td className="input-field" colSpan={4}>
+          <tr className="text-row" id="lower-text">
+            <td className="text-field" colSpan={4}>
               <Input />
             </td>
           </tr>

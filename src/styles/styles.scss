@@ -7,11 +7,16 @@ $desktop-xl: 1600px;
 
 .input {
   width: 100%;
-  // box-sizing: border-box;
+  box-sizing: border-box;
   font-size: xx-large;
   height: 100%;
   resize: none;
   text-align: right;
+  cursor: default;
+}
+
+textarea:focus, textarea:focus-visible {
+  outline:0;
 }
 
 .text-row {
@@ -64,7 +69,7 @@ table {
   textarea {
     font-weight: 600;
     font-size: xx-large;
-    color: white;
+    // color: white;
     height: 100%;
   }
   .key {
@@ -89,17 +94,10 @@ table {
   }
 }
 
-
 @media (prefers-color-scheme: light) {
   .key {
     background-color: white;
     color: black;
-    font-size: large;
-    font-weight: 700;
-  }
-  textarea{
-    font-size: large;
-    font-weight: 700;
   }
 }
 

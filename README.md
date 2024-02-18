@@ -1,2 +1,2 @@
-# amalraj28.github.io
+# Calculator
 A basic calculator built using React and styled using SASS

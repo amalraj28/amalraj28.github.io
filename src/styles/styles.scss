@@ -7,7 +7,7 @@ $desktop-xl: 1600px;
 
 .input {
   width: 100%;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   font-size: xx-large;
   height: 100%;
   resize: none;
@@ -19,7 +19,6 @@ $desktop-xl: 1600px;
 }
 
 .input-div {
-  // height: 100%;
   display: flex;
   place-items: baseline;
 }
@@ -29,39 +28,21 @@ $desktop-xl: 1600px;
   height: 10vh;
 }
 
-// #lower-text {
-//   height: 5vh;
-// }
-
-// #upper-text {
-//   height: 2vh;
-// }
-
 .key-div {
   height: 100%;
 }
-
-// .table {
-//   width: 500px;
-// }
 
 .key {
   width: 100%;
   height: 100%;
   color: white;
+  font-size: x-large;
 }
 
 .table {
-  margin-top: 10vh;
-  // margin-bottom: 5vh;
-  margin-left: 5vh;
-  margin-right: 5vh;
-  // height: 80vh;
+  margin-left: 6vw;
   width: 85vw;
   background-color: white;
-  margin-left: 7%;
-  margin-right: 5%;
-
   display: flex;
   justify-content: center;
 }
@@ -69,72 +50,73 @@ $desktop-xl: 1600px;
 table {
   background-color: blue;
   height: 80vh;
-  // width: 100vw;
+  width: 100%;
+
 }
-
-tr {
-  background-color: red;
-}
-
-td {
-  background-color: green;
-  /* width: 33%; */
-}
-
-// @media only screen and (max-width: 768px) {
-//   .input {
-//     /* font-size: small; Adjust font size for smaller screens */
-//     /* color: aqua; */
-//     /* background-color: aqua; */
-//   }
-// }
-
-// @media screen and (max-width: $mobile-xs) {
-//   table {
-//     width: calc($mobile-xs/2); // Adjust table width for smaller screens
-//     background-color: red;
-//   }
-// }
-
-// @media screen and (min-width: $mobile-lg) {
-//   .table {
-//     display: flex;
-//     place-items: center;
-//     background-color: blue;
-//     justify-content: center;
-    
-//   }
-// }
-  
-//   table {
-//     width: 100vw;
-//     height: 100%;
-//     // height: 100vh;
-//   }
-// }
 
 @media screen and (min-width: $desktop-sm) {
-  table {
-    width: 60vw;
-  }
   .text-row {
     height: 15vh;
   }
   .input-div {
     height: 15vh;
   }
+  textarea {
+    font-weight: 600;
+    font-size: xx-large;
+    color: white;
+    height: 100%;
+  }
   .key {
-    font-size: x-large;
+    font-size: xx-large;
   }
   .table {
     margin-top: 3vh;
-    // width: 50vw;
-    // height: 5vh;
   }
 }
 
-@media screen and (max-width: $mobile-lg){
+@media screen and (width < $mobile-md){
   .input {
     height: 15vh;
+  }
+
+  textarea {
+    font-weight: 600;
+    font-size: xx-large;
+  }
+  .key {
+    font-size: large;
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  .key {
+    background-color: white;
+    color: black;
+    font-size: large;
+    font-weight: 700;
+  }
+  textarea{
+    font-size: large;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: $mobile-md) and (orientation: landscape) {
+  .table {
+    transform: scale(0.8, 0.8);
+    height: 100vh;
+  }
+}
+
+@media screen and (width >= $mobile-md) and (width <= $mobile-lg) and (orientation: portrait){
+  .input {
+    height: 15vh;
+    font-weight: 600;
+    font-size: xx-large;
+  }
+  .key {
+    font-size: xx-large;
   }
 }

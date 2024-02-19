@@ -1,9 +1,4 @@
-$mobile-xs: 300px;
-$mobile-md: 768px;
-$mobile-lg: 1024px;
-$desktop-sm: 1200px;
-$desktop-lg: 1440px;
-$desktop-xl: 1600px;
+@use '../constants/constants' as *;
 
 .input {
   width: 100%;

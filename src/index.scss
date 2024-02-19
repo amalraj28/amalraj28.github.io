@@ -1,10 +1,3 @@
-$mobile-xs: 300px;
-$mobile-md: 768px;
-$mobile-lg: 1024px;
-$desktop-sm: 1200px;
-$desktop-lg: 1440px;
-$desktop-xl: 1600px;
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -49,12 +42,6 @@ button {
     outline: dashed 4px;
   }
 }
-
-
-// button:focus,
-// button:focus-visible {
-//   outline: 2px auto -webkit-focus-ring-color;
-// }
 
 @media screen {
   body {
